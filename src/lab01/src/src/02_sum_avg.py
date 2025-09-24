@@ -1,0 +1,5 @@
+first = input()
+sec = input()
+first = float(first.replace(",","."))
+sec = float(sec.replace(",","."))
+print(round(first + sec,2), round((first + sec)/2,2))
