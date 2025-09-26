@@ -1,13 +1,13 @@
 # pythom_labsgit
 # лаба 1
-# задание 1
+## задание 1
 name = input("Имя : ")
 aage = int(input("Возраст : "))
 print("Привет",name,"!", "Через год тебе будет", aage + 1, "." )
 
 ![alt text](src/images/lab01/знакомство.png)
 
-# задание 2
+## задание 2
 first = input()
 sec = input()
 first = float(first.replace(",","."))
@@ -16,7 +16,7 @@ print(round(first + sec,2), round((first + sec)/2,2))
 
 ![alt text](src/images/lab01/мредсумм.png)
 
-# задание 3
+## задание 3
 price = int(input())
 sasale = int(input())
 vshevstvennie = int(input())
@@ -29,14 +29,14 @@ print("Итог к оплате: ", itog)
 
 ![alt text](src/images/lab01/касса.png)
 
-# задание 4
+## задание 4
 minets = int(input("Minuti : "))
 howers = minets // 60
 print(f"{howers}:{minets % 60}")
 
 ![alt text](src/images/lab01/минутычасы.png)
 
-# задание 5
+## задание 5
 familia,ima,otchestwo = input("ФИО : ").split()
 iniciala = familia[0] + ima[0] + otchestwo[0]
 dlina = len(familia) + len(ima) + len(otchestwo)
