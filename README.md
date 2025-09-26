@@ -8,7 +8,7 @@ print("Привет",name,"!", "Через год тебе будет", aage + 1
 ![alt text](src/images/lab01/знакомство.png)
 
 ## задание 2
-first = input()
+###first = input()
 sec = input()
 first = float(first.replace(",","."))
 sec = float(sec.replace(",","."))
