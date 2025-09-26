@@ -8,7 +8,7 @@ print("Привет",name,"!", "Через год тебе будет", aage + 1
 ![alt text](src/images/lab01/знакомство.png)
 
 ## задание 2
-###first = input()
+first = input()
 sec = input()
 first = float(first.replace(",","."))
 sec = float(sec.replace(",","."))
@@ -16,7 +16,7 @@ print(round(first + sec,2), round((first + sec)/2,2))
 
 ![alt text](src/images/lab01/мредсумм.png)
 
-## задание 3
+### задание 3
 price = int(input())
 sasale = int(input())
 vshevstvennie = int(input())
