@@ -1,6 +1,8 @@
 # pythom_labsgit
 ### лаба 1
+
 ### задание 1
+```bash
 name = input("Имя : ")
 aage = int(input("Возраст : "))
 print("Привет",name,"!", "Через год тебе будет", aage + 1, "." )
@@ -52,6 +54,7 @@ print("Длина : ", dlina + 2) # два потому что у нас три 
 
 ### ЛАБА 2
 ### задание 1.1
+```bash
 def pp(a):
     if a == "[]":
         return ValueError
@@ -70,9 +73,10 @@ def pp(a):
         return (m, bol)
 asadasdasdas = input()
 ![alt text](1.1image.png)
-
+```
 
 ### задание 1.2
+```bash
 def pppp(a):
     if a == "[]":
         return a
@@ -91,8 +95,9 @@ def pppp(a):
 s = input()
 print(pppp(s))
 ![alt text](src/images/lab02/1.2.png)
-
+```
 ### задание 1.3
+```bash
 import ast
 def pspsp(a):
     b = []
@@ -107,6 +112,7 @@ def pspsp(a):
 sss = input()
 print(pspsp(sss))
 ![alt text](src/images/lab02/1.3.png)
+```
 ### задание 2.1
  import ast
 def psiz(a):
@@ -119,8 +125,11 @@ def psiz(a):
     return [list(i) for i in zip(*s)]
 aaa = input()
 print(psiz(aaa))
+```
 ![alt text](src/images/lab02/2.1.png)
+
 ### задание 2.2
+```bash
 import ast
 def psiz(a):
     s = ast.literal_eval(a)
@@ -145,8 +154,10 @@ def psiz(a):
     return [sum(i) for i in zip(*s)]
 aaa = input()
 print(psiz(aaa))
+```
 ![alt text](src/images/lab02/2.3.png)
 ### задание 3
+```bash
 def ФИО(a):
     grade = a[-1]
     grupp = a[-2]
@@ -167,4 +178,5 @@ print(ФИО(("Иванов uван Иванович", "IKBO-12", 4.6)))
 print(ФИО(("Петров Пётр", "IKBO-12", 5.0)))
 print(ФИО(("Петров Пётр Петрович", "IKBO-12", 5.0)))
 print(ФИО(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
+```
 ![alt text](src/images/lab02/3.png)
