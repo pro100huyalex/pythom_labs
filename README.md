@@ -114,6 +114,7 @@ print(pspsp(sss))
 ![alt text](src/images/lab02/1.3.png)
 ```
 ### задание 2.1
+```bash
  import ast
 def psiz(a):
     s = ast.literal_eval(a)
