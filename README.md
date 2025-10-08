@@ -73,7 +73,7 @@ def pp(a):
         return (m, bol)
 asadasdasdas = input()
 ```
-![alt text](1.1image.png)
+![alt text](src/images/lab02/1.1image.png)
 
 
 ### задание 1.2
