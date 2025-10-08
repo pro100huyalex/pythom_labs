@@ -72,8 +72,9 @@ def pp(a):
             bol = int(str(bol)[:-2])
         return (m, bol)
 asadasdasdas = input()
-![alt text](1.1image.png)
 ```
+![alt text](1.1image.png)
+
 
 ### задание 1.2
 ```bash
@@ -94,8 +95,9 @@ def pppp(a):
         return list(sorted(set(b)))
 s = input()
 print(pppp(s))
-![alt text](src/images/lab02/1.2.png)
 ```
+![alt text](src/images/lab02/1.2.png)
+
 ### задание 1.3
 ```bash
 import ast
@@ -111,8 +113,9 @@ def pspsp(a):
     return b
 sss = input()
 print(pspsp(sss))
-![alt text](src/images/lab02/1.3.png)
 ```
+![alt text](src/images/lab02/1.3.png)
+
 ### задание 2.1
 ```bash
  import ast
