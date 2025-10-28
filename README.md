@@ -184,3 +184,128 @@ print(ФИО(("Петров Пётр Петрович", "IKBO-12", 5.0)))
 print(ФИО(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
 ```
 ![alt text](src/images/lab02/3.png)
+
+
+### Лаба 3
+### задание 1
+```bash
+def normalize(text: str, *, casefold: bool = True, yoe: bool = True):
+    resu = text
+    contro = ['\t', '\r', '\n', '\v', '\f']
+    for char in contro:
+        resu = resu.replace(char, ' ')
+    while '  ' in resu:
+        resu = resu.replace('  ', ' ')
+    resu = resu.strip()
+    if yoe:
+        resu = resu.replace('ё', 'е').replace('Ё', 'Е')
+    if casefold:
+        resu = resu.casefold()
+    return resu
+print(normalize("ПрИвЕт\nМИр\t"))
+print(normalize("ёжик, Ёлка"))
+print(normalize("Hello\r\nWorld"))
+print(normalize("  двойные   пробелы  "))
+```
+![alt text](src/images/lab03/1text.png)
+
+### задание 2
+```bash
+def tokenize(text: str):
+    result = []
+    current_word = []
+    for i, char in enumerate(text):
+        if char.isalnum() or char == '_':
+            current_word.append(char)
+        elif char == '-' and current_word and i + 1 < len(text) and (text[i + 1].isalnum() or text[i + 1] == '_'):
+            current_word.append(char)
+        else:
+            if current_word:
+                result.append(''.join(current_word))
+                current_word = []
+    if current_word:
+        result.append(''.join(current_word))
+    
+    return result
+print(tokenize("привет мир"))
+print(tokenize("hello,world!!!"))
+print(tokenize("по-настоящему круто"))
+print(tokenize("emoji 😀 не слово"))
+```
+![alt text](src/images/lab03/2.png)
+
+### задание 3
+```bash
+from collections import Counter
+
+def count_freq(tokens: list[str]) -> dict[str, int]:
+    return dict(Counter(tokens))
+print(count_freq(["a","b","a","c","b","a"]))
+```
+![alt text](src/images/lab03/3.png)
+
+### задание 4
+```bash
+def top(a: list):
+    prow = set(a)
+    prow = sorted(a)
+    schet = {}
+    for i in prow:
+        schet[i] = a.count(i)
+    return schet
+print(top(["bb", "aa", "bb", "aa", "cc" ]))
+```
+![alt text](src/images/lab03/4.png)
+
+### задание 5
+```bash
+def normalize(text: str, *, casefold: bool = True, yoe: bool = True):
+    resu = text
+    contro = ['\t', '\r', '\n', '\v', '\f']
+    for char in contro:
+        resu = resu.replace(char, ' ')
+    while '  ' in resu:
+        resu = resu.replace('  ', ' ')
+    resu = resu.strip()
+    if yoe:
+        resu = resu.replace('ё', 'е').replace('Ё', 'Е')
+    if casefold:
+        resu = resu.casefold()
+    return resu
+def tokenize(text: str):
+
+    result = []
+    current_word = []
+    for i, char in enumerate(text):
+        if char.isalnum() or char == '_':
+            current_word.append(char)
+        elif char == '-' and current_word and i + 1 < len(text) and (text[i + 1].isalnum() or text[i + 1] == '_'):
+            current_word.append(char)
+        else:
+            if current_word:
+                result.append(''.join(current_word))
+                current_word = []
+    if current_word:
+        result.append(''.join(current_word))
+    
+    return result
+def teststsd(sss:str):
+    a = tokenize(normalize(sss))
+    prow = set(a)
+
+    prow = sorted(a)
+    schet = {}
+    vsego = 0
+    for i in prow:
+        schet[i] = a.count(i)
+    for key in schet:
+        vsego += schet[key]
+    print("Всего слов:", vsego)
+    print("Уникальных слов:", len(schet))
+    print("Топ 5:")
+    for i in sorted(schet.items(), reverse=True)[:5]:
+        print(f"{i[0]}: {i[1]}")
+teststsd("Привет, мир! Привет")
+```
+![alt text](src/images/lab03/5.png)
+
