@@ -147,7 +147,7 @@ aaa = input()
 print(psiz(aaa))
 ```
 ![alt text](src/images/lab02/2.2.png)
-
+```bash
 ### задание 2.3
 import ast
 def psiz(a):
