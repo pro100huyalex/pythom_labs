@@ -145,7 +145,9 @@ def psiz(a):
     return [sum(i) for i in s]
 aaa = input()
 print(psiz(aaa))
+```
 ![alt text](src/images/lab02/2.2.png)
+
 ### задание 2.3
 import ast
 def psiz(a):
