@@ -1,20 +1,21 @@
-def ФИО(a):
-    grade = a[-1]
-    grupp = a[-2]
-    inic = list(a[:-2])
-    inic = str(inic[0])
-    inic = inic.split()
-    grade = f"{grade:.2f}"
-    if type(grade) != str:
-        return ValueError
-    initials = inic[0][0].upper() + inic[0][1:]
-    for i in inic[1:]:
-        initials += " " + i[0].upper() + "."
-    itogstr = initials + ", гр. " + grupp + ", " + grade
+def format_record(rec: tuple[str, str, float]) -> str:
 
-    return itogstr
+    fio, group, gpa = rec
+    if not (isinstance(fio, str) and isinstance(group, str)) or not isinstance(gpa, (int, float)):
+        return 'Неверные типы данных'
+    
+    parts = " ".join(fio.strip().split()).split()
+    if len(parts) < 2 or not group.strip():
+        return 'Некорректное ФИО или группа'
+    
+    surname = parts[0].capitalize()
+    initials = "".join(p[0].upper() + "." for p in parts[1:3])
+    
+    return f'{surname} {initials}, гр. {group.strip()}, GPA {gpa:.2f}'
 
-print(ФИО(("Иванов uван Иванович", "IKBO-12", 4.6)))
-print(ФИО(("Петров Пётр", "IKBO-12", 5.0)))
-print(ФИО(("Петров Пётр Петрович", "IKBO-12", 5.0)))
-print(ФИО(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
+
+
+print(format_record(('Иванов Иван Иванович', 'BIVT-25', 4.6)))
+print(format_record(('Петров Пётр', 'IKBO-12', 5.0)))
+print(format_record(('Петров Пётр Петрович', 'IKBO-12', 5.0)))
+print(format_record(('  сидорова  анна   сергеевна ', 'ABB-01', 3.999)))
